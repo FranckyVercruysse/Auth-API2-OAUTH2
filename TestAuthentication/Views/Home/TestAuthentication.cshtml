@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "TestAuthentication";
+}
+
+
+@*<script>
+    @using Microsoft.AspNet.Identity
+    console.log('done -> User.Identity.IsAuthenticated =  @User.Identity.IsAuthenticated   =>  @User.Identity.GetUserName()');
+</script>*@
+
+<h2>TestAuthentication</h2>
+
+<button data-bind="click: function(){ getvalues(); }">GET api/values</button>
+<button data-bind="click: function(){ getvalues(5); }">GET api/values/5</button>
+<br /><br />
+Resultaat : <input type="text" data-bind="value: resultaat" readonly>
+<br /><br />
+<div class="col-md-offset-2 col-md-10">
+    @*indien fouten dan zichtbaar*@
+    <textarea cols="40" rows="5" readonly data-bind="value: result,visible:result" style="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: red;"></textarea>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/app")
+}
+
+
+
+
+
+
+
+
+
+
+

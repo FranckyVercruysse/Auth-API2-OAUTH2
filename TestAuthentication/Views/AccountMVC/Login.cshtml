@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/app")
+}
+
+<form class="form-group" role="form" data-bind="submit: login">
+    <h4>Log in</h4>
+    <hr />
+    <br />
+    <div class="form-group">
+        <label class="col-md-2 control-label">Gebruikersnaam</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" data-bind="value: loginGebruikersnaam" />
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <label class="col-md-2 control-label">Password</label>
+        <div class="col-md-10">
+            <input class="form-control" type="password" data-bind="value: loginPassword" />
+        </div>
+    </div>
+    <br /><br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Log in" class="btn btn-default" />
+        </div>
+    </div>
+    <br /><br />
+    <div class="col-md-offset-2 col-md-10">
+        @*indien fouten dan zichtbaar*@
+        <textarea cols="40" rows="5" readonly data-bind="value: result,visible:result" style="color: #FFFFFF; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: red;"></textarea>
+    </div>
+</form>
+
+
