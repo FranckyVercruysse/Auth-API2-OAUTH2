@@ -13,6 +13,16 @@
 }
 else
 {
+    <script>
+        //dit is nodig omdat token bewaard blijft op computer alhoewel de gebruiker niet meer ingelogd is
+        var tokenKey = 'accessToken';
+        token = window.localStorage.getItem(tokenKey);
+
+        console.log('token : ' + token);
+        window.localStorage.removeItem(tokenKey);
+    </script>
+
+
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Register", "Register", "AccountMVC")</li>
         <li>@Html.ActionLink("Log in", "Login", "AccountMVC")</li>

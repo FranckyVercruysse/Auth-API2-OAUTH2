@@ -1,4 +1,4 @@
-﻿<script src="~/Scripts/jquery-1.10.2.js"></script>
+﻿@*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
 
 <form class="form-group" role="form" data-bind="submit: register">
     <h4>Maak een nieuwe account aan</h4>
@@ -38,6 +38,7 @@
 </form>
 
 @section Scripts {
+    @*@Scripts.Render("~/bundles/jquery")*@
     @Scripts.Render("~/bundles/app")
     @Scripts.Render("~/bundles/jqueryval")
 }
